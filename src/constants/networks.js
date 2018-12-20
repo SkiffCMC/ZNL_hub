@@ -33,7 +33,13 @@ const networks = {
     address: 'http://localhost:4000',
     code: 2,
   },
+  znlDevnet: { // network name translation t('znlDevnet');
+    name: 'Custom Node',
+    custom: true,
+    address: 'http://127.0.0.1:5000',
+    code: 3,
+  },
 };
 
-networks.default = networks[window.localStorage && window.localStorage.getItem('defaultNetwork')] || networks.mainnet;
+networks.default = networks[window.localStorage && window.localStorage.getItem('defaultNetwork')] || networks.znlDevnet;
 module.exports = networks;
