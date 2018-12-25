@@ -36,7 +36,7 @@ const networks = {
   znlDevnet: { // network name translation t('znlDevnet');
     name: 'Custom Node',
     custom: true,
-    address: 'http://127.0.0.1:5000',
+    address: 'http://127.0.0.1:4000',
     code: 3,
   },
 };
