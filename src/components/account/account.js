@@ -12,7 +12,7 @@ import styles from './account.css';
  */
 
 const Account = ({ peers, t, showNetworkIndicator }) => {
-  const iconMap = ['mainnet', 'testnet', 'devnet'];
+  const iconMap = ['mainnet', 'testnet', 'devnet','znlDevnet'];
   const translations = iconMap.map(code => t(code));
 
   let iconCode = peers.options.code;
@@ -20,6 +20,8 @@ const Account = ({ peers, t, showNetworkIndicator }) => {
     iconCode = (peers.options.nethash === Lisk.constants.MAINNET_NETHASH) ?
       networks.mainnet.code : iconCode;
     iconCode = (peers.options.nethash === Lisk.constants.TESTNET_NETHASH) ?
+      networks.testnet.code : iconCode;
+    iconCode = (peers.options.nethash === Lisk.constants.ZNLDEVNET_NETHASH) ?
       networks.testnet.code : iconCode;
   }
 
