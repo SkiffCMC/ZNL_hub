@@ -12,7 +12,7 @@ import styles from './account.css';
  */
 
 const Account = ({ peers, t, showNetworkIndicator }) => {
-  const iconMap = ['mainnet', 'testnet', 'devnet','znlDevnet'];
+  const iconMap = ['mainnet', 'testnet', 'devnet', 'znlDevnet'];
   const translations = iconMap.map(code => t(code));
 
   let iconCode = peers.options.code;
