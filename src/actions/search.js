@@ -80,7 +80,8 @@ export const searchAccount = ({ address }) =>
       }
       dispatch({ data: accountData, type: actionTypes.searchAccount });
     });
-    console.log(`Adress for search was ` + address);
+    console.log('Adress for search was ');
+	console.log(address);
   };
 
 export const searchTransactions = ({
