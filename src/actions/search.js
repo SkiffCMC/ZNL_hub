@@ -80,8 +80,8 @@ export const searchAccount = ({ address }) =>
       }
       dispatch({ data: accountData, type: actionTypes.searchAccount });
     });
-    console.log('Adress for search was ');
-    console.log(address);
+    console.log('Peers were ');
+    console.log(getState().peers);
   };
 
 export const searchTransactions = ({
