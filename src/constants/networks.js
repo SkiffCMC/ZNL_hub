@@ -20,7 +20,7 @@ const networks = {
       'https://hub37.lisk.io',
       'https://hub38.lisk.io',
     ],
-  },*/
+  }, */
   testnet: { // network name translation t('Testnet');
     name: 'Testnet',
     testnet: true,
