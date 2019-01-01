@@ -41,6 +41,7 @@ const networks = {
   },
 };
 
-// networks.default = networks[window.localStorage && window.localStorage.getItem('defaultNetwork')] || networks.znlDevnet;
+// networks.default = networks[window.localStorage && window.localStorage.getItem('defaultNetwork')] 
+// || networks.znlDevnet;
 networks.default = networks.znlDevnet;
 module.exports = networks;
