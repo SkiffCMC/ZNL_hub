@@ -1,8 +1,8 @@
 const settings = {
   currencies: ['USD', 'EUR'],
   keys: {
-    loginKey: 'loginKey',
-    liskCoreUrl: 'liskCoreUrl',
+    loginKey: '',
+    liskCoreUrl: '',
   },
 };
 export default settings;
