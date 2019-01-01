@@ -37,7 +37,7 @@ const login = (dispatch, getState, data, config) => { // eslint-disable-line max
       passphrase,
       publicKey,
       address,
-      network: code || 0,
+      network: code || 3,
       loginType: data.hwInfo ? loginType.ledger : loginType.normal,
       peerAddress: data.network.nodes[0],
       hwInfo: data.hwInfo ? data.hwInfo : {},
