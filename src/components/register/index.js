@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   account: state.account,
-  network: state.peers.options || getNetwork(0),
+  network: state.peers.options || getNetwork(3),
 });
 
 export default connect(
