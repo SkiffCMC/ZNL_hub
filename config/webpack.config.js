@@ -12,7 +12,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.js$/,
-        exclude: [/node_modules/,/home/znl/ZNL_elements/],
+        exclude: ['/node_modules/','/home/znl/ZNL_elements/'],
         loader: 'eslint-loader',
         options: {},
       },
