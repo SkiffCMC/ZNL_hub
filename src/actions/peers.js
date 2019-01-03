@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import Lisk from 'lisk-elements';
+import Lisk from 'znl-elements';
 import actionTypes from '../constants/actions';
 import networks from '../constants/networks';
 import { errorToastDisplayed } from './toaster';
