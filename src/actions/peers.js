@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import Lisk from '/home/znl/ZNL_elements/packages/lisk-elements/dist-browser/index.js';
+import Lisk from 'znl-elements';
 import actionTypes from '../constants/actions';
 import networks from '../constants/networks';
 import { errorToastDisplayed } from './toaster';
