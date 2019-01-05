@@ -13,7 +13,7 @@
     "build:testnet:post": "replace '\"mainnet\";//defaultNetwork' '\"testnet\";//defaultNetwork' ./app/build-testnet/index.html ",
     "dev": "webpack-dev-server --config ./config/webpack.config.dev --env.dev --hot",
     "dev-hardware-wallet": "webpack-dev-server --config ./config/webpack.config.dev --env.dev --hot --https",
-    "build-prod": "webpack --config ./config/webpack.config.prod --env.prod",
+    "build-prod": "webpack --config ./config/webpack.config.prod --env.prod --display-error-details",
     "build-electron": "webpack --config ./config/webpack.config.electron",
     "cypress:open": "cypress open --project test/cypress",
     "cypress:run": "cypress run --project test/cypress",
