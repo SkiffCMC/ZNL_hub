@@ -12,13 +12,13 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: ['/node_modules/','../ZNL_elements/'],
         loader: 'eslint-loader',
         options: {},
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: ['/node_modules/','../ZNL_elements/'],
         loader: 'babel-loader',
         options: {
           presets: [
