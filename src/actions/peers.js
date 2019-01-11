@@ -93,6 +93,8 @@ export const liskAPIClientSet = data =>
     }
 
     if (config.custom) {
+	  console.log('Lisk=');
+	  console.log(Lisk);
       const liskAPIClient = new Lisk.APIClient(config.nodes, {});
       loadingStarted('getConstants');
       liskAPIClient.node.getConstants().then((response) => {
