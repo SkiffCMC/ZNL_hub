@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import Lisk from 'lisk-elements';
+import Znl from 'znl-elements';
 import actionTypes from '../constants/actions';
 import networks from '../constants/networks';
 import { errorToastDisplayed } from './toaster';
@@ -93,9 +93,9 @@ export const liskAPIClientSet = data =>
     }
 
     if (config.custom) {
-      console.log('Lisk=');
-      console.log(Lisk);
-      const liskAPIClient = new Lisk.APIClient(config.nodes, {});
+      console.log('Znl=');
+      console.log(Znl);
+      const liskAPIClient = new Znl.APIClient(config.nodes, {});
       loadingStarted('getConstants');
       liskAPIClient.node.getConstants().then((response) => {
         dispatch(loadingFinished('getConstants'));
