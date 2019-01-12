@@ -172,7 +172,6 @@ class Login extends React.Component {
 
     if (this.state.network === networks.customNode.code) {
       const liskAPIClient = new Znl.APIClient([nodeURL], {});
-      const liskAPIClient = new Znl.APIClient([nodeURL], {});
       liskAPIClient.node.getConstants()
         .then((res) => {
           if (res.data) {
