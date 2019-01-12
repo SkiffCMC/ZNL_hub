@@ -16,7 +16,7 @@ const peerSet = (data, config) => ({
   data: Object.assign({
     passphrase: data.passphrase,
     publicKey: data.publicKey,
-    liskAPIClient: new Lisk.APIClient(config.nodes, { nethash: config.nethash }),
+    liskAPIClient: new Znl.APIClient(config.nodes, { nethash: config.nethash }),
     options: config,
     loginType: data.loginType,
   }),
@@ -31,7 +31,7 @@ const login = (dispatch, getState, data, config) => { // eslint-disable-line max
     const { code } = data.network;
     const publicKey = passphrase ? extractPublicKey(passphrase) : data.publicKey;
     const liskAPIClient = store.peers.liskAPIClient ||
-      new Lisk.APIClient(config.nodes, { nethash: config.nethash });
+      new Znl.APIClient(config.nodes, { nethash: config.nethash });
     const address = extractAddress(publicKey);
     const accountBasics = {
       passphrase,
@@ -85,10 +85,10 @@ export const liskAPIClientSet = data =>
     if (config.address) {
       config.nodes = [config.address];
     } else if (config.testnet) {
-      config.nethash = Lisk.APIClient.constants.TESTNET_NETHASH;
+      config.nethash = Znl.APIClient.constants.TESTNET_NETHASH;
       config.nodes = networks.testnet.nodes;
     } else {
-      config.nethash = Lisk.APIClient.constants.MAINNET_NETHASH;
+      config.nethash = Znl.APIClient.constants.MAINNET_NETHASH;
       config.nodes = networks.mainnet.nodes;
     }
 
