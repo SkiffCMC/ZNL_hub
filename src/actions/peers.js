@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import Znl from 'znl-elements';
+import * as Znl from 'znl-elements';
 import actionTypes from '../constants/actions';
 import networks from '../constants/networks';
 import { errorToastDisplayed } from './toaster';
