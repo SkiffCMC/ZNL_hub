@@ -1,7 +1,7 @@
-import Lisk from 'lisk-elements';
+import * as Znl from 'znl-elements';
 
 export const extractPublicKey = passphrase =>
-  Lisk.cryptography.getKeys(passphrase).publicKey;
+  Znl.cryptography.getKeys(passphrase).publicKey;
 
 /**
  * @param {String} data - passphrase or public key
@@ -11,7 +11,7 @@ export const extractAddress = (data) => {
     return false;
   }
   if (data.indexOf(' ') < 0) {
-    return Lisk.cryptography.getAddressFromPublicKey(data);
+    return Znl.cryptography.getAddressFromPublicKey(data);
   }
-  return Lisk.cryptography.getAddressFromPassphrase(data);
+  return Znl.cryptography.getAddressFromPassphrase(data);
 };

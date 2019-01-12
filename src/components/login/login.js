@@ -2,7 +2,7 @@
 import React from 'react';
 import grid from 'flexboxgrid/dist/flexboxgrid.css';
 import i18next from 'i18next';
-import Lisk from 'lisk-elements';
+import * as Znl from 'znl-elements';
 
 import ToolBoxDropdown from '../toolbox/dropdown/toolBoxDropdown';
 import ToolBoxInput from '../toolbox/inputs/toolBoxInput';
@@ -171,7 +171,8 @@ class Login extends React.Component {
     const nodeURL = address !== '' ? addHttp(address) : address;
 
     if (this.state.network === networks.customNode.code) {
-      const liskAPIClient = new Lisk.APIClient([nodeURL], {});
+      const liskAPIClient = new Znl.APIClient([nodeURL], {});
+      const liskAPIClient = new Znl.APIClient([nodeURL], {});
       liskAPIClient.node.getConstants()
         .then((res) => {
           if (res.data) {

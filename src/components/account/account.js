@@ -1,5 +1,5 @@
 import React from 'react';
-import Lisk from 'lisk-elements';
+import * as Znl from 'znl-elements';
 import { FontIcon } from '../fontIcon';
 import networks from '../../constants/networks';
 import styles from './account.css';
@@ -17,11 +17,11 @@ const Account = ({ peers, t, showNetworkIndicator }) => {
 
   let iconCode = peers.options.code;
   if (iconCode === 2) {
-    iconCode = (peers.options.nethash === Lisk.constants.MAINNET_NETHASH) ?
+    iconCode = (peers.options.nethash === Znl.constants.MAINNET_NETHASH) ?
       networks.mainnet.code : iconCode;
-    iconCode = (peers.options.nethash === Lisk.constants.TESTNET_NETHASH) ?
+    iconCode = (peers.options.nethash === Znl.constants.TESTNET_NETHASH) ?
       networks.testnet.code : iconCode;
-    iconCode = (peers.options.nethash === Lisk.constants.ZNLDEVNET_NETHASH) ?
+    iconCode = (peers.options.nethash === Znl.constants.ZNLDEVNET_NETHASH) ?
       networks.testnet.code : iconCode;
   }
 
