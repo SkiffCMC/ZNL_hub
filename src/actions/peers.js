@@ -81,7 +81,8 @@ const login = (dispatch, getState, data, config) => { // eslint-disable-line max
 export const liskAPIClientSet = data =>
   (dispatch, getState) => { // eslint-disable-line max-statements
     const config = data.network || {};
-
+    console.log('Config=');
+    console.log(config);
     if (config.address) {
       config.nodes = [config.address];
     } else if (config.testnet) {
