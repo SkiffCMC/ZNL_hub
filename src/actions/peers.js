@@ -81,8 +81,8 @@ const login = (dispatch, getState, data, config) => { // eslint-disable-line max
 export const liskAPIClientSet = data =>
   (dispatch, getState) => { // eslint-disable-line max-statements
     const config = data.network || {};
-    console.log('Config=');
-    console.log(config);
+    //console.log('Config=');
+    //console.log(config);
     if (config.address) {
       config.nodes = [config.address];
     } else if (config.testnet) {
@@ -97,13 +97,16 @@ export const liskAPIClientSet = data =>
     }
 
     if (config.custom) {
-      console.log('Znl=');
-      console.log(Znl);
+      //console.log('Znl=');
+      //console.log(Znl);
       const liskAPIClient = new Znl.APIClient(config.nodes, {});
       loadingStarted('getConstants');
       liskAPIClient.node.getConstants().then((response) => {
         dispatch(loadingFinished('getConstants'));
         config.nethash = response.data.nethash;
+        console.log('Before dispatching=');
+        console.log(data);
+        console.log(config);		
         dispatch(peerSet(data, config));
         login(dispatch, getState, data, config);
       }).catch((error) => {
