@@ -81,7 +81,7 @@ export const searchAccount = ({ address }) =>
       dispatch({ data: accountData, type: actionTypes.searchAccount });
     });
     console.log('liskAPIClient was ');
-    console.log(getState().peers.liskAPIClient);
+    console.log(liskAPIClient);
   };
 
 export const searchTransactions = ({
