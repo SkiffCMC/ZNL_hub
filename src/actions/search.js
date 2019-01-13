@@ -89,8 +89,8 @@ export const searchTransactions = ({
 }) =>
   (dispatch, getState) => {
     const liskAPIClient = getState().peers.liskAPIClient;
-    console.log('In searchTransactions with APIClient: ');
-    console.log(liskAPIClient);
+    console.log('In searchTransactions with peers: ');
+    console.log(getState().peers);
     if (showLoading) dispatch(loadingStarted(actionTypes.searchTransactions));
     getTransactions({
       liskAPIClient, address, limit, filter,
