@@ -107,6 +107,7 @@ export const liskAPIClientSet = data =>
         login(dispatch, getState, data, config);
       }).catch((error) => {
         dispatch(loadingFinished('getConstants'));
+        console.log('Error in dispatching');
         if (error && error.message) {
           dispatch(errorToastDisplayed({ label: i18next.t(`Unable to connect to the node, Error: ${error.message}`) }));
         } else {
