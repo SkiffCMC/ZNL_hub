@@ -87,6 +87,9 @@ export const liskAPIClientSet = data =>
     } else if (config.testnet) {
       config.nethash = Znl.APIClient.constants.TESTNET_NETHASH;
       config.nodes = networks.testnet.nodes;
+    } else if (config.znlDevnet) {
+      config.nethash = Znl.APIClient.constants.ZNLDEVNET_NETHASH;
+      config.nodes = networks.znlDevnet.nodes;
     } else {
       config.nethash = Znl.APIClient.constants.MAINNET_NETHASH;
       config.nodes = networks.mainnet.nodes;
